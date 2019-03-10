@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -12,6 +13,7 @@ import javafx.stage.Stage;
  * @author baike
  */
 public class BlankStage extends Application {
+    private Label myLabel;
 
     @Override
     public void start(Stage stage) {
@@ -19,6 +21,9 @@ public class BlankStage extends Application {
 
         Button button = new Button();
         button.setText("Click me");
+
+        myLabel = new Label();
+        myLabel.setText("This is a label");
 
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -29,6 +34,7 @@ public class BlankStage extends Application {
 
         StackPane root = new StackPane();
         root.getChildren().add(button);
+        root.getChildren().add(myLabel);
         Scene scene = new Scene(root, 250, 200);
         stage.setScene(scene);
         stage.show();
