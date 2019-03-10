@@ -7,9 +7,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -17,7 +16,7 @@ import javafx.stage.Stage;
  */
 public class BlankStage extends Application {
     private Label myLabel;
-    private Label myLabel2;
+    private TextField nameTextField;
 
     @Override
     public void start(Stage stage) {
@@ -29,13 +28,20 @@ public class BlankStage extends Application {
         myLabel = new Label();
         myLabel.setText("This is a label");
 
-//        myLabel2 = new Label();
-//        myLabel2.setText("Label 2");
+        nameTextField = new TextField();
+        nameTextField.setPromptText("Enter your name");
 
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                myLabel.setText("This is a label");
+                String name = nameTextField.getText().trim();
+                if (!name.equals("") && !name.equals(null)) {
+                    myLabel.setText(name);
+                } else {
+                    myLabel.setText("You didn't type anything.");
+                }
+
+
                 System.out.println("Hello JavaFX");
             }
         });
@@ -46,7 +52,7 @@ public class BlankStage extends Application {
 //        StackPane root = new StackPane();
         flowPaneRoot.getChildren().add(button);
         flowPaneRoot.getChildren().add(myLabel);
-//        flowPaneRoot.getChildren().add(myLabel2);
+        flowPaneRoot.getChildren().add(nameTextField);
         Scene scene = new Scene(flowPaneRoot, 250, 200);
         stage.setScene(scene);
         stage.show();
