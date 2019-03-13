@@ -1,5 +1,7 @@
 package scenebuilder;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -18,12 +20,20 @@ public class SceneBuilderController implements Initializable {
     @FXML
     private Label labelId;
 
+    @FXML
+    private JFXTextField textField;
+
+    @FXML
+    private JFXButton materialButton;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        clickMeButton.setOnAction(new EventHandler<ActionEvent>() {
+        materialButton.setOnAction(new EventHandler<ActionEvent>() {
+
             @Override
             public void handle(ActionEvent actionEvent) {
-                labelId.setText("Hey there");
+                String textString = textField.getText().trim();
+                labelId.setText(textString);
             }
         });
     }
