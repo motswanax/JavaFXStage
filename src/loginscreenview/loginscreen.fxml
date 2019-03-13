@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -9,47 +8,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-            prefWidth="700.0" style="-fx-background-color: #29434e;" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginscreencontroller.LoginScreenController">
+            prefWidth="700.0" style="-fx-background-color: #29434e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginscreencontroller.LoginScreenController">
    <children>
-      <Label alignment="CENTER" layoutX="303.0" layoutY="111.0" prefHeight="32.0" prefWidth="95.0" text="Login"
-             textFill="WHITE">
+      <Label alignment="CENTER" layoutX="303.0" layoutY="111.0" prefHeight="32.0" prefWidth="95.0" text="Login" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="loginUsername" focusColor="#d34657" layoutX="234.0" layoutY="180.0" prefHeight="25.0"
-                    prefWidth="234.0" promptText="Enter your username" unFocusColor="#a16262">
+      <JFXTextField fx:id="loginUsername" focusColor="#d34657" layoutX="234.0" layoutY="180.0" prefHeight="25.0" prefWidth="234.0" promptText="Enter your username" unFocusColor="#a16262">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="loginPassword" focusColor="#d34657" layoutX="233.0" layoutY="240.0" prefHeight="25.0"
-                        prefWidth="234.0" unFocusColor="#a16262">
+      <JFXPasswordField fx:id="loginPassword" focusColor="#d34657" layoutX="233.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" unFocusColor="#a16262">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton fx:id="loginButton" layoutX="232.0" layoutY="318.0" prefHeight="25.0" prefWidth="234.0"
-                 style="-fx-background-color: #819ca9;" text="Login">
+      <JFXButton fx:id="loginButton" layoutX="232.0" layoutY="318.0" prefHeight="25.0" prefWidth="234.0" style="-fx-background-color: #819ca9;" text="Login">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="86.0" fitWidth="200.0" layoutX="306.0" layoutY="14.0" pickOnBounds="true"
-                 preserveRatio="true">
+      <ImageView fitHeight="86.0" fitWidth="200.0" layoutX="306.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icons8-java-64.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="157.0" layoutY="173.0" pickOnBounds="true"
-                 preserveRatio="true">
+      <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="157.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icons8-user-48.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="157.0" layoutY="233.0" pickOnBounds="true"
-                 preserveRatio="true">
+      <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="157.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icons8-password-48.png" />
          </image>
