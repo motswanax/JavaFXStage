@@ -1,0 +1,23 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+/**
+ * @author baike
+ */
+public class LoginScreenMain extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/loginscreenview/loginscreen.fxml"));
+        stage.setTitle("Yo What Up");
+        stage.setScene(new Scene(root, 700, 400));
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
